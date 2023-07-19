@@ -45,6 +45,14 @@ class RoomController(
         }
     }
 
+    suspend fun deleteMessage(message: Message) {
+        messageDataSource.deleteMessage(message)
+    }
+
+    suspend fun getMessageById(id: String): Message? {
+        return messageDataSource.getMessageById(id)
+    }
+
     suspend fun getAllMessages(): List<Message> {
         return messageDataSource.getAllMessages()
     }

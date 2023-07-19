@@ -8,4 +8,8 @@ interface MessageDataSource {
 
     suspend fun insertMessages(message: Message)
 
+    suspend fun deleteMessage(message: Message)
+
+    suspend fun getMessageById(id: String) : Message
+
 }
